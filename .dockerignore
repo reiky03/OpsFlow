@@ -1,0 +1,14 @@
+.git
+.github
+.env
+.env.*
+!.env.example
+**/.DS_Store
+backend/.env
+backend/.phpunit.result.cache
+backend/bootstrap/cache/*.php
+backend/storage/logs/*
+backend/vendor
+frontend/dist
+frontend/node_modules
+var
