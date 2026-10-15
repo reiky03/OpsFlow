@@ -17,6 +17,38 @@ OpsFlow brings support tickets, technician workflows, company assets, notificati
 
 </div>
 
+![OpsFlow dashboard showing ticket workload, current operations, and asset visibility](docs/screenshots/dashboard.png)
+
+---
+
+## Explore the demo
+
+OpsFlow brings employee support requests and IT asset custody into one role-aware workspace. The screenshots below come from the locally running application and use fictional seed data.
+
+**1. Start at the sign-in screen.** A clean entry point leads into the workspace; what each person can see depends on their assigned role.
+
+![OpsFlow sign-in page](docs/screenshots/login.png)
+
+**2. Scan the operational picture.** The dashboard summarizes visible ticket volume, work in progress, resolved work, assets, and recent activity in one place.
+
+**3. Follow a request through its record.** Ticket details bring the request, public conversation, ownership, attachments, and immutable activity trail together.
+
+![Ticket detail page with status, conversation, ownership, and activity history](docs/screenshots/ticket-detail.png)
+
+**4. Keep equipment and custody visible.** Employees can review their assigned equipment; the layout adapts to smaller screens as well.
+
+<table>
+  <tr><th>Assigned assets</th><th>Responsive mobile view</th></tr>
+  <tr>
+    <td><img src="docs/screenshots/assets.png" alt="Employee asset page with assigned laptop and monitor" width="720"></td>
+    <td><img src="docs/screenshots/assets-mobile.png" alt="OpsFlow asset page adapted to a mobile screen" width="300"></td>
+  </tr>
+</table>
+
+**5. Review role-based access.** Administrators can inspect capabilities by role. Permissions are enforced by the Laravel API, not just hidden in the interface.
+
+![Access control page showing role profiles and grouped permissions](docs/screenshots/access-control.png)
+
 ---
 
 ## About the project
@@ -29,6 +61,7 @@ The project is intentionally more than a CRUD showcase. It demonstrates business
 
 ## Table of contents
 
+- [Explore the demo](#explore-the-demo)
 - [Business workflow](#business-workflow)
 - [Core capabilities](#core-capabilities)
 - [Roles and access](#roles-and-access)
@@ -342,7 +375,8 @@ opsflow/
 │       ├── pages/                 Route-level application screens
 │       └── types/                 API TypeScript contracts
 ├── docker/                        Development and production images
-├── docs/                          API, Docker, deployment, reviews
+├── docs/                          API, Docker, deployment, reviews, screenshots
+│   └── screenshots/               README product-tour captures
 ├── .github/workflows/ci.yml       Automated verification pipeline
 ├── compose.yaml                   Development stack
 ├── compose.production.yaml        Production-style stack
@@ -412,7 +446,7 @@ The PRD MVP is implemented and verified locally.
 - [x] Docker development and production stacks
 - [x] Automated tests and CI pipeline
 - [ ] Public portfolio deployment
-- [ ] Curated repository screenshots
+- [x] Curated repository screenshots
 
 Future scope intentionally left outside the MVP includes SLA automation, reporting/export, knowledge base, SSO, real-time WebSocket notifications, and AI-assisted categorization.
 
